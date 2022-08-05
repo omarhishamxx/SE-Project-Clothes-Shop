@@ -32,17 +32,19 @@ if(!empty($_SESSION['UserID'])) {
           <a class="nav-link" href="viewprofile.php">Start Order</a>
         </li>
       
+        <?php  if(!empty($_SESSION['UserID'])) {
 
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">User Settings</a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="viewprofile.php">View Profile</a>
-            <a class="dropdown-item" href="profilesettings.php">Edit Profile</a>
-            <a class="dropdown-item" href="#">Later will add</a>
+        echo "<!-- Dropdown -->
+        <li class='nav-item dropdown'>
+          <a class='nav-link dropdown-toggle' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true'
+            aria-expanded='false'>User Settings</a>
+          <div class='dropdown-menu dropdown-primary' aria-labelledby='navbarDropdownMenuLink'>
+            <a class='dropdown-item' href='viewprofile.php'>View Profile</a>
+            <a class='dropdown-item' href='profilesettings.php'>Edit Profile</a>
+            <a class='dropdown-item' href='#'>Later will add</a>
           </div>
-        </li>
+        </li>";
+    }?>
 
       </ul>
       <!-- Links -->
